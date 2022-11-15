@@ -1,14 +1,13 @@
 import java.util.Scanner;
-import pile.PileParTableau;
 
-import java.util.Arrays;
+import pile.PileParTableau;
 
 public class Main{
     public static void main(String[] args) {
         //PileParTableau pile1 = new PileParTableau(5);
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("Combien de valeur voulez vous dans votre tableau ?");
+        System.out.println("How many values do you want in your array ?");
 
         int tabLength = scan.nextInt();
 
@@ -17,14 +16,14 @@ public class Main{
         int pileLength = 0;
 
         for (int i=0; i<tabLength; i++) {
-            System.out.println("Entrez votre valeur dans le tableau, celà doit être un opérateur ou un chiffre");
+            System.out.println("Enter your value in the array, it must be an operator or a number");
             tab[i] = scan.next().charAt(0);
             if (isInteger(tab[i])) {
                 pileLength++;
             }
         }
 
-        System.out.println("Votre pile comporte " + pileLength + " nombres");
+        System.out.println("Your stack has " + pileLength + " numbers");
 
         PileParTableau pile2 = new PileParTableau(pileLength);
 
@@ -35,25 +34,28 @@ public class Main{
         int currentOp = pileLength;
 
         while (pile2.length() != 1) {
-            int operator2 = Integer.parseInt(String.valueOf(pile2.unstack()));
-            int operator1 = Integer.parseInt(String.valueOf(pile2.unstack()));
+
+            int operator2 = getNumber(pile2.unstack());
+            int operator1 = getNumber(pile2.unstack());
+
             char operator = tab[currentOp];
+
             pile2.stack(Operate(operator1, operator2, operator));
             currentOp++;
         }
 
-        System.out.println("Le résultat est : " + pile2.peak());
+        System.out.println("The result is : " + pile2.peak());
 
-        /*
+        /* Test Phase
         for (int i=0; i<5;i++) {
-            pile1.empiler(i);
+            pile1.stack(i);
             Arrays.stream(pile1.myPile).forEach(o -> System.out.println(o));
         }
 
-        System.out.println("séparation");
+        System.out.println("separation");
 
         for (int i=0; i<5; i++) {
-            System.out.println(pile1.depiler());
+            System.out.println(pile1.unstack());
         }
          */
     }
@@ -68,15 +70,21 @@ public class Main{
     }
 
     private static int Operate(int elem1, int elem2, char op) {
-        switch (op) {
+        return switch (op) {
             case '+':
-                return elem1 + elem2;
+                yield elem1 + elem2;
             case '*':
-                return elem1 * elem2;
+                yield elem1 * elem2;
             case '-':
-                return elem1 - elem2;
+                yield elem1 - elem2;
+            case '/':
+                yield elem1 / elem2;
             default:
-                return elem1 / elem2;
-        }
+                throw new IllegalArgumentException("Unexpected operator");
+        };
+    }
+
+    private static int getNumber(Object elem1) {
+        return Integer.parseInt(String.valueOf(elem1));
     }
 }

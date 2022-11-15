@@ -2,12 +2,11 @@ package pile;
 
 public class PileParTableau implements Pile {
     private int peak = -1;
-    private int TAILLEMAX;
-    public Object myPile[] = new Object[TAILLEMAX];
+    private int MAXLENGTH;
+    public Object[] myPile = new Object[MAXLENGTH];
 
-    public PileParTableau(int TAILLEMAX) {
-        this.TAILLEMAX = TAILLEMAX;
-        this.myPile = new Object[TAILLEMAX];
+    public PileParTableau(int MAXLENGTH) {
+        this.MAXLENGTH = MAXLENGTH;
     }
 
     @Override
@@ -17,7 +16,7 @@ public class PileParTableau implements Pile {
 
     @Override
     public boolean isFull() {
-        return (this.peak == this.TAILLEMAX - 1);
+        return (this.peak == this.MAXLENGTH - 1);
     }
 
     @Override
@@ -44,5 +43,6 @@ public class PileParTableau implements Pile {
             this.peak--;
             return this.myPile[peak + 1];
         }
+        return false;
     }
 }
