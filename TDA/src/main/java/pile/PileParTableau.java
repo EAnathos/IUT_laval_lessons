@@ -1,7 +1,7 @@
 package pile;
 
 public class PileParTableau implements Pile {
-    private int sommet = -1;
+    private int peak = -1;
     private int TAILLEMAX;
     public Object myPile[] = new Object[TAILLEMAX];
 
@@ -11,40 +11,38 @@ public class PileParTableau implements Pile {
     }
 
     @Override
-    public boolean pileVide() {
-        return (this.sommet == -1);
+    public boolean isEmpty() {
+        return (this.peak == -1);
     }
 
     @Override
-    public boolean pilePleine() {
-        return (this.sommet == this.TAILLEMAX - 1);
+    public boolean isFull() {
+        return (this.peak == this.TAILLEMAX - 1);
     }
 
     @Override
-    public int longueur() {
-        return this.sommet+1;
+    public int length() {
+        return this.peak +1;
     }
 
     @Override
-    public Object sommet() {
-        return this.myPile[sommet];
+    public Object peak() {
+        return this.myPile[peak];
     }
 
     @Override
-    public void empiler(Object elem) {
-        if (!this.pilePleine()) {
-            this.sommet++;
-            this.myPile[sommet] = elem;
+    public void stack(Object elem) {
+        if (!this.isFull()) {
+            this.peak++;
+            this.myPile[peak] = elem;
         }
     }
 
     @Override
-    public Object depiler() {
-        if (this.pileVide()) {
-            return false;
-        } else {
-            this.sommet--;
-            return this.myPile[sommet+1];
+    public Object unstack() {
+        if (!this.isEmpty()) {
+            this.peak--;
+            return this.myPile[peak + 1];
         }
     }
 }

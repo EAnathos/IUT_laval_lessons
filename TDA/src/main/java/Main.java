@@ -29,20 +29,20 @@ public class Main{
         PileParTableau pile2 = new PileParTableau(pileLength);
 
         for(int i=0; i<pileLength; i++) {
-            pile2.empiler(tab[i]);
+            pile2.stack(tab[i]);
         }
 
         int currentOp = pileLength;
 
-        while (pile2.longueur() != 1) {
-            int operator2 = Integer.parseInt(String.valueOf(pile2.depiler()));
-            int operator1 = Integer.parseInt(String.valueOf(pile2.depiler()));
+        while (pile2.length() != 1) {
+            int operator2 = Integer.parseInt(String.valueOf(pile2.unstack()));
+            int operator1 = Integer.parseInt(String.valueOf(pile2.unstack()));
             char operator = tab[currentOp];
-            pile2.empiler(Operate(operator1, operator2, operator));
+            pile2.stack(Operate(operator1, operator2, operator));
             currentOp++;
         }
 
-        System.out.println(pile2.sommet());
+        System.out.println("Le résultat est : " + pile2.peak());
 
         /*
         for (int i=0; i<5;i++) {

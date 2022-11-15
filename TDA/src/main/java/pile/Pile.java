@@ -1,15 +1,15 @@
 package pile;
 
 public interface Pile {
-    boolean pileVide();
+    boolean isEmpty();
 
-    boolean pilePleine();
+    boolean isFull();
 
-    int longueur();
+    int length();
 
-    Object sommet();
+    Object peak();
 
-    void empiler(Object elem);
+    void stack(Object elem);
 
-    Object depiler();
+    Object unstack();
 }
