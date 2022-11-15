@@ -9,7 +9,7 @@ public interface Pile {
 
     Object sommet();
 
-    void empiler();
+    void empiler(Object elem);
 
     Object depiler();
 }
