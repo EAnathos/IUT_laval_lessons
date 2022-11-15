@@ -12,18 +12,12 @@ public class PileParTableau implements Pile {
 
     @Override
     public boolean pileVide() {
-        if(this.sommet >= 0) {
-            return false;
-        }
-        return true;
+        return (this.sommet == -1);
     }
 
     @Override
     public boolean pilePleine() {
-        if(this.sommet == this.TAILLEMAX - 1) {
-            return true;
-        }
-        return false;
+        return (this.sommet == this.TAILLEMAX - 1);
     }
 
     @Override
