@@ -7,8 +7,8 @@ public class Main{
         //PileParTableau pile1 = new PileParTableau(5);
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("How many values do you want in your array ?");
 
+        System.out.println("How many values do you want in your array ?");
         int tabLength = scan.nextInt();
 
         char[] tab = new char[tabLength];
@@ -45,6 +45,9 @@ public class Main{
         }
 
         System.out.println("The result is : " + pile2.peak());
+
+        //Verify if there is still a value in the pile.
+        pile2.unstack();
 
         /* Test Phase
         for (int i=0; i<5;i++) {

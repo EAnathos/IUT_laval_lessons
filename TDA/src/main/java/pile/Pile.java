@@ -1,9 +1,9 @@
 package pile;
 
 public interface Pile {
-    boolean isEmpty();
+    boolean isEmpty() throws TestException;
 
-    boolean isFull();
+    boolean isFull()  throws TestException;
 
     int length();
 
