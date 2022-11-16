@@ -28,26 +28,26 @@ public class Main{
         PileParTableau pile2 = new PileParTableau(pileLength);
 
         for(int i=0; i<pileLength; i++) {
-            pile2.stack(tab[i]);
+            pile2.push(tab[i]);
         }
 
         int currentOp = pileLength;
 
         while (pile2.length() != 1) {
 
-            int operator2 = getNumber(pile2.unstack());
-            int operator1 = getNumber(pile2.unstack());
+            int operator2 = getNumber(pile2.pop());
+            int operator1 = getNumber(pile2.pop());
 
             char operator = tab[currentOp];
 
-            pile2.stack(Operate(operator1, operator2, operator));
+            pile2.push(Operate(operator1, operator2, operator));
             currentOp++;
         }
 
         System.out.println("The result is : " + pile2.peak());
 
         //Verify if there is still a value in the pile.
-        pile2.unstack();
+        pile2.pop();
 
         /* Test Phase
         for (int i=0; i<5;i++) {

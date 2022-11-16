@@ -32,7 +32,7 @@ public class PileParTableau implements Pile {
     public Object peak() { return this.myPile[peak]; }
 
     @Override
-    public void stack(Object elem) {
+    public void push(Object elem) {
         try {
             if (!this.isFull()) this.myPile[++peak] = elem;
         } catch (TestException e) {
@@ -41,7 +41,7 @@ public class PileParTableau implements Pile {
     }
 
     @Override
-    public Object unstack() {
+    public Object pop() {
         try {
             if (!this.isEmpty()) {
                 this.peak--;

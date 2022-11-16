@@ -9,7 +9,7 @@ public interface Pile {
 
     Object peak();
 
-    void stack(Object elem);
+    void push(Object elem);
 
-    Object unstack();
+    Object pop();
 }
