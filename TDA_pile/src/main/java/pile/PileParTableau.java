@@ -12,15 +12,13 @@ public class PileParTableau implements Pile {
 
     @Override
     public boolean isEmpty() throws TestException {
-        if(peak != -1)
-            return false;
+        if(peak != -1) return false;
         throw new TestException("The pile is empty");
     }
 
     @Override
     public boolean isFull() throws TestException {
-        if (this.peak != this.MAXLENGTH - 1)
-            return false;
+        if (this.peak != this.MAXLENGTH - 1) return false;
         throw new TestException("The pile is full");
     }
 
@@ -50,6 +48,6 @@ public class PileParTableau implements Pile {
         } catch (TestException e) {
             e.printStackTrace();
         }
-        return false;
+        return null;
     }
 }
