@@ -73,6 +73,8 @@ public class Main{
     }
 
     private static int Operate(int elem1, int elem2, char op) {
+        //Here you have an enhanced switch, in the latest versions of Java it won't work.
+        // Use the code below in the comments instead.
         return switch (op) {
             case '+':
                 yield elem1 + elem2;
@@ -85,6 +87,21 @@ public class Main{
             default:
                 throw new IllegalArgumentException("Unexpected operator");
         };
+
+        /* The version of switch that will work on the latest versions of Java.
+        switch (op) {
+            case '+':
+                return elem1 + elem2;
+            case '*':
+                return elem1 * elem2;
+            case '-':
+                return elem1 - elem2;
+            case '/':
+                return elem1 / elem2;
+            default:
+                throw new IllegalArgumentException("Unexpected operator");
+        }
+        */
     }
 
     private static int getNumber(Object elem1) {
