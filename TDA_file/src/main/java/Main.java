@@ -1,5 +1,9 @@
 import file.FileByChaining;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 public class Main {
     //Perform a test that simulates a card battle game between 2 virtual players.
     //The game is played with a deck starting at 2 and ending at 14.
@@ -13,25 +17,26 @@ public class Main {
         FileByChaining cardPlayed = new FileByChaining();
 
         //Create a deck of 52 cards
-        int[] deck = new int[52];
+        List deck = new ArrayList<Integer>();
         int nbCards = 0;
         for (int i = 2; i <= 14; i++) {
-            deck[nbCards] = i;
+            deck.add(i);
             nbCards++;
-            deck[nbCards] = i;
+            deck.add(i);
             nbCards++;
-            deck[nbCards] = i;
+            deck.add(i);
             nbCards++;
-            deck[nbCards] = i;
+            deck.add(i);
             nbCards++;
         }
 
         //Shuffle the deck.
+        Collections.shuffle(deck);
 
         //Create the deck of each player
         for (int i = 0; i < 52; i = i + 2) {
-            player1.push(deck[i]);
-            player2.push(deck[i + 1]);
+            player1.push(deck.get(i));
+            player2.push(deck.get(i+1));
         }
 
         //Display the decks
