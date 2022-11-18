@@ -1,9 +1,11 @@
 package file;
 
 public interface File {
-    boolean isEmpty() throws TestException;
+    boolean isEmpty();
 
     int length();
+
+    String showFile();
 
     Object peak();
 

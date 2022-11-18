@@ -12,7 +12,7 @@ public class PileParTableau implements Pile {
 
     @Override
     public boolean isEmpty() throws TestException {
-        if(peak != -1) return false;
+        if(this.peak == -1) return true;
         throw new TestException("The pile is empty");
     }
 
@@ -27,7 +27,16 @@ public class PileParTableau implements Pile {
     public int length() { return this.peak +1; }
 
     @Override
-    public Object peak() { return this.myPile[peak]; }
+    public Object peak() {
+        try {
+            if (this.isEmpty()) {
+                return this.myPile[this.peak];
+            }
+        } catch (TestException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
 
     @Override
     public void push(Object elem) {
@@ -41,7 +50,7 @@ public class PileParTableau implements Pile {
     @Override
     public Object pop() {
         try {
-            if (!this.isEmpty()) {
+            if (this.isEmpty()) {
                 this.peak--;
                 return this.myPile[peak + 1];
             }
