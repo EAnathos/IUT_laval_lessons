@@ -13,8 +13,7 @@ public class FileByChaining implements File {
 
     @Override
     public boolean isEmpty() {
-        if (this.first == null) return true;
-        return false;
+        return (this.first == null);
     }
 
     @Override

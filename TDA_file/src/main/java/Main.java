@@ -17,17 +17,12 @@ public class Main {
         FileByChaining cardPlayed = new FileByChaining();
 
         //Create a deck of 52 cards
-        List deck = new ArrayList<Integer>();
-        int nbCards = 0;
+        List<Integer> deck = new ArrayList<>();
         for (int i = 2; i <= 14; i++) {
             deck.add(i);
-            nbCards++;
             deck.add(i);
-            nbCards++;
             deck.add(i);
-            nbCards++;
             deck.add(i);
-            nbCards++;
         }
 
         //Shuffle the deck.
