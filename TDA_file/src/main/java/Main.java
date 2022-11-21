@@ -52,7 +52,7 @@ public class Main {
             cardPlayed.push(card2);
 
             //if there is a tie, 1 cards from each player are played face down and the game continues.
-            while (card1 == card2) {
+            if (card1 == card2) {
                 System.out.println("Tie ! " + card1 + " = " + card2);
                 card1 = player1.pop();
                 card2 = player2.pop();
@@ -72,7 +72,7 @@ public class Main {
                     player1.push(cardPlayed.pop());
                 }
                 System.out.println("Player 1 wins the round " + nbRounds);
-            } else {
+            } else if ((int)card2 > (int)card1){
                 while (cardPlayed.length() != 0) {
                     player2.push(cardPlayed.pop());
                 }
