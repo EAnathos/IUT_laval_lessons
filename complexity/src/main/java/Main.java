@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        System.out.println(totalSum(5));
+        System.out.println(totalSum(350000000000L));
     }
 
     private static long totalSum(long nb) {
