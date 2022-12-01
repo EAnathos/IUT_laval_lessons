@@ -27,26 +27,32 @@ public class Main {
         }
     }
 
-    private static int cloison(int[] array, int start, int end) {
-        int counter = start;
+    private static int partition(int[] array, int begin, int end) {
         int pivot = array[end];
-
-        for (int i = start + 1; i < end; i++) {
-            if (array[i] < pivot) {
-                counter++;
-                int tmp = array[counter];
-                cloison(array, counter, i);
+        int i = begin - 1, j = end + 1;
+        while (true) {
+            j--;
+            while (array[j] > pivot) {
+                i++;
+            }
+            while (array[i] < pivot) {
+                if(i < j) {
+                    int tmp = array[i];
+                    array[i] = array[j];
+                    array[j] = tmp;
+                } else {
+                    return j;
+                }
             }
         }
-        cloison(array, start, counter);
-        return counter;
     }
 
-    private static void quickSort(int[] array, int start, int end) {
-        if (start < end) {
-            int pivot = cloison(array, start, end);
-            quickSort(array, start, pivot - 1);
-            quickSort(array, pivot + 1, end);
+    private static void quickSort(int[] array, int begin, int end) {
+        int partitionIndex;
+        if (begin < end) {
+            partitionIndex = partition(array, begin, end);
+            quickSort(array, begin, end);
+            quickSort(array, end + 1, end);
         }
     }
 }
