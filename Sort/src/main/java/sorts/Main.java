@@ -145,7 +145,7 @@ public class Main {
             k++;
         }
 
-        /* This one is useless.
+        /* This one is useless because, it will always be the first array which will be sorted first.
         while (j < rightLength) {
             array[k] = rightArray[j];
             j++;

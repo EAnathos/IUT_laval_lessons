@@ -2,18 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f23ed9d-c493-453b-a983-6ce7645d6104" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDA_file/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDA_file/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDA_pile/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDA_pile/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDA_pile/target/classes/pile/Pile.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDA_pile/target/classes/pile/Pile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDA_pile/target/classes/pile/PileParTableau.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDA_pile/target/classes/pile/PileParTableau.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TDA_pile/target/classes/pile/TestException.class" beforeDir="false" afterPath="$PROJECT_DIR$/TDA_pile/target/classes/pile/TestException.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/src/main/java/sorts/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/src/main/java/sorts/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sort/target/classes/sorts/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Sort/target/classes/sorts/Main.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +18,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="TDA" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="TDA" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -45,6 +50,7 @@
       <updated>1669823498191</updated>
       <workItem from="1669823499488" duration="21000" />
       <workItem from="1669823562929" duration="27000" />
+      <workItem from="1670244084062" duration="35000" />
     </task>
     <servers />
   </component>
