@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo -n "Donnez moi votre nombre ? "; read a
+echo -n "Donnez moi votre nombre à factoriser ? "; read a
  
 function factRecursive() {
     local n=$1
